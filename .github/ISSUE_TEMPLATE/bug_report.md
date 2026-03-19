@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a software error or unexpected behavior.
+about: Report a software error or unexpected behavior
 title: "[BUG]: <Short description>"
 labels: bug
 assignees: ''
