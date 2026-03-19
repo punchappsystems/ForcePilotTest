@@ -1,0 +1,80 @@
+name: 🐛 Bug Report
+description: Report a software error or unexpected behavior.
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you begin
+      description: Please check if you have searched for existing issues.
+      options:
+        - label: I have searched [existing issues](https://github.com/punchappsystems/ForcePilotTest/issues) to make sure this hasn't been reported yet.
+          required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: On which operating system did the error occur?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Android
+        - iOS
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: OS Version
+      placeholder: "e.g. Windows 11 / iOS 17.4"
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App Version
+      placeholder: "e.g. v1.0.5"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we make this bug happen again?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected vs Actual Behavior
+      placeholder: |
+        Expected: I expected X to happen...
+        Actual: Instead, Y happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots/Logs
+      description: Drag and drop screenshots or paste error logs here.
